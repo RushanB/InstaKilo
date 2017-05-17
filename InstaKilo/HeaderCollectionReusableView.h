@@ -10,4 +10,6 @@
 
 @interface HeaderCollectionReusableView : UICollectionReusableView
 
+- (void)setHeaderText:(NSString *)text;
+
 @end

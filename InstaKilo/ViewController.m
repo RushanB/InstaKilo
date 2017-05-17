@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PhotoCollectionViewCell.h"
 #import "Photo.h"
+#import "HeaderCollectionReusableView.h"
 
 typedef NS_ENUM(NSUInteger, Section) {
     AllSection,
@@ -98,6 +99,8 @@ typedef NS_ENUM(NSUInteger, Section) {
                         @"Italy":@[p10]
                         };
     
+    N
+    
     self.dataDictionary = @[d1, d2, d3];
     self.keysArray = @[d1.allKeys, d2.allKeys, d3.allKeys];
 //    
@@ -107,6 +110,19 @@ typedef NS_ENUM(NSUInteger, Section) {
     
 //    self.arrayOfImages = [@[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]mutableCopy];
 //    return self.arrayOfImages;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        HeaderCollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+        [view setHeaderText:self.currentKeys[indexPath.section]];
+        
+        return view;
+    }
+    
+    return nil;
+    
 }
 
 #pragma mark #NUMBEROFSECTIONS

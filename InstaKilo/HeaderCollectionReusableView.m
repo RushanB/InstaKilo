@@ -7,6 +7,7 @@
 //
 
 #import "HeaderCollectionReusableView.h"
+#import "Photo.h"
 
 @interface HeaderCollectionReusableView()
 
@@ -16,7 +17,11 @@
 @end
 
 @implementation HeaderCollectionReusableView
--(void)
+
+- (void)setHeaderText:(NSString *)text {
+    self.headerLabel.text = text;
+}
+
 
 
 @end
