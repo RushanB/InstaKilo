@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,40 +22,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="URR-hn-CFp">
-                                <rect key="frame" x="0.0" y="10" width="375" height="657"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="URR-hn-CFp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lPb-cq-rjN">
-                                    <size key="itemSize" width="159" height="170"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lPb-cq-rjN">
+                                    <size key="itemSize" width="375" height="276"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dEj-8p-AY5" customClass="PhotoCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="170"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dEj-8p-AY5" customClass="PhotoCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="159" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J5D-XT-gDj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="170"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J5D-XT-gDj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="J5D-XT-gDj" firstAttribute="leading" secondItem="dEj-8p-AY5" secondAttribute="leading" id="3Wf-rM-dcx"/>
-                                            <constraint firstItem="J5D-XT-gDj" firstAttribute="top" secondItem="dEj-8p-AY5" secondAttribute="top" id="gzh-wJ-Xy5"/>
-                                            <constraint firstAttribute="bottom" secondItem="J5D-XT-gDj" secondAttribute="bottom" id="pdv-JE-C0s"/>
-                                            <constraint firstAttribute="trailing" secondItem="J5D-XT-gDj" secondAttribute="trailing" id="pkJ-xW-t1b"/>
+                                            <constraint firstItem="J5D-XT-gDj" firstAttribute="top" secondItem="dEj-8p-AY5" secondAttribute="top" id="0I8-eO-DHQ"/>
+                                            <constraint firstItem="J5D-XT-gDj" firstAttribute="leading" secondItem="dEj-8p-AY5" secondAttribute="leading" id="7t3-55-zOO"/>
+                                            <constraint firstAttribute="trailing" secondItem="J5D-XT-gDj" secondAttribute="trailing" id="LLD-t6-jI4"/>
+                                            <constraint firstAttribute="bottom" secondItem="J5D-XT-gDj" secondAttribute="bottom" id="jd3-Ut-bTk"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="myImage" destination="J5D-XT-gDj" id="z0W-Km-ffI"/>
+                                            <outlet property="myImage" destination="J5D-XT-gDj" id="KcE-VY-nd9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" id="6j8-Vl-9VO" customClass="HeaderCollectionReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn9-c6-zTb">
+                                            <rect key="frame" x="44" y="15" width="288" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tn9-c6-zTb" secondAttribute="trailing" constant="35" id="TA0-0I-Fdm"/>
+                                        <constraint firstItem="tn9-c6-zTb" firstAttribute="top" secondItem="6j8-Vl-9VO" secondAttribute="topMargin" constant="7" id="YXI-gD-NDK"/>
+                                        <constraint firstItem="tn9-c6-zTb" firstAttribute="leading" secondItem="6j8-Vl-9VO" secondAttribute="leadingMargin" constant="36" id="aet-rh-EIe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tn9-c6-zTb" secondAttribute="bottom" constant="6" id="qfc-ab-7P8"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="tn9-c6-zTb" id="K5k-qg-Xio"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="vCh-12-wYb"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4Fs-yD-puc"/>
@@ -63,9 +87,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6iS-FL-6Z5"/>
+                    <navigationItem key="navigationItem" id="6iS-FL-6Z5">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="w7x-gj-dso">
+                            <rect key="frame" x="87.5" y="7" width="200" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Location"/>
+                                <segment title="Subject"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentChosen:" destination="BYZ-38-t0r" eventType="valueChanged" id="6zO-dx-G39"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoCollectionView" destination="URR-hn-CFp" id="WPF-Bd-WJ0"/>
+                        <outlet property="segmentChoice" destination="w7x-gj-dso" id="PTY-Yx-UdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

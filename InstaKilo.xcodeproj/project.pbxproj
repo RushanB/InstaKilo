@@ -15,6 +15,7 @@
 		310DD8451ECCBFD900E27FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310DD8431ECCBFD900E27FCD /* LaunchScreen.storyboard */; };
 		310DD8541ECCC37D00E27FCD /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */; };
 		310DD8571ECCC39700E27FCD /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8561ECCC39700E27FCD /* Photo.m */; };
+		310DD85D1ECD070200E27FCD /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD85C1ECD070200E27FCD /* HeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		310DD8551ECCC39700E27FCD /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		310DD8561ECCC39700E27FCD /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		310DD85B1ECD070200E27FCD /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		310DD85C1ECD070200E27FCD /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				310DD8391ECCBFD900E27FCD /* AppDelegate.m */,
 				310DD83B1ECCBFD900E27FCD /* ViewController.h */,
 				310DD83C1ECCBFD900E27FCD /* ViewController.m */,
+				310DD85B1ECD070200E27FCD /* HeaderCollectionReusableView.h */,
+				310DD85C1ECD070200E27FCD /* HeaderCollectionReusableView.m */,
 				310DD8521ECCC37D00E27FCD /* PhotoCollectionViewCell.h */,
 				310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */,
 				310DD8551ECCC39700E27FCD /* Photo.h */,
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310DD85D1ECD070200E27FCD /* HeaderCollectionReusableView.m in Sources */,
 				310DD83D1ECCBFD900E27FCD /* ViewController.m in Sources */,
 				310DD8541ECCC37D00E27FCD /* PhotoCollectionViewCell.m in Sources */,
 				310DD83A1ECCBFD900E27FCD /* AppDelegate.m in Sources */,

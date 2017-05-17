@@ -15,12 +15,11 @@
 @property (nonatomic) NSString *subject;
 @property (nonatomic) NSString *location;
 
-@property (nonatomic) NSMutableDictionary *subjectD;
-@property (nonatomic) NSMutableDictionary *locationD;
-@property (nonatomic) NSMutableArray *arrayOfImages;
+//@property (nonatomic) NSMutableDictionary *subjectD;
+//@property (nonatomic) NSMutableDictionary *locationD;
+//@property (nonatomic) NSMutableArray *arrayOfImages;
 
-
--(NSMutableArray *)getArrayOfImages;
+//-(NSMutableArray *)getArrayOfImages;
 
 -(instancetype)initWithImage:(UIImage *)image andSubject:(NSString *)subject andLocation:(NSString *)location;
 

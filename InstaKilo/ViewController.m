@@ -10,18 +10,46 @@
 #import "PhotoCollectionViewCell.h"
 #import "Photo.h"
 
+typedef NS_ENUM(NSUInteger, Section) {
+    AllSection,
+    LocationSection,
+    SubjectSection,
+};
+
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic,weak) IBOutlet UICollectionView *photoCollectionView;
-//@property (nonatomic) Photo *myImages;
-@property (nonatomic) NSDictionary<NSString*, Photo*> *subjectD;
-@property (nonatomic) NSDictionary<NSString*, Photo*> *locationD;
-@property (nonatomic) NSArray <NSString *>* subjectKeys;
-@property (nonatomic) NSArray <NSString *>* locationKeys;
+@property (nonatomic) Photo *myImages;
+
+//@property (nonatomic) NSDictionary<NSString*, Photo*> *subjectD;
+//@property (nonatomic) NSDictionary<NSString*, Photo*> *locationD;
+
+@property (nonatomic) NSArray *keysArray;
+@property (nonatomic) NSArray *dataDictionary;
+
+@property (nonatomic) NSDictionary<NSString*, NSArray<Photo*>*> *currentDataDictionary;
+@property (nonatomic) NSArray <NSString *>* currentKeys;
+
+//
+//@property (nonatomic) NSArray <NSString *>* subjectKeys;
+//@property (nonatomic) NSArray <NSString *>* locationKeys;
+
+@property (nonatomic, weak) IBOutlet UISegmentedControl *segmentChoice;
+//@property (nonatomic) Section choiceOfSegment;
+;
+
 
 @end
 
 @implementation ViewController
+
+- (void)setSegmentChoice:(UISegmentedControl *)segmentChoice {
+    self.currentKeys = self.keysArray[segmentChoice.selectedSegmentIndex];
+    self.currentDataDictionary = self.dataDictionary[segmentChoice.selectedSegmentIndex];
+    
+    [self.photoCollectionView  reloadData];
+    _segmentChoice = segmentChoice;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,8 +57,16 @@
     //    self.myImages = [Photo new];
     //    [self.myImages getArrayOfImages];
     [self createImageArray];
-    NSLog()
+    //self.photoCollectionView.dataSource;
+    //CGFloat width = self.view.frame.size.width / 2;
+    //((UICollectionViewFlowLayout *)self.photoCollectionView.collectionViewLayout).itemSize = CGSizeMake(width, width);
     
+    self.segmentChoice = AllSection;
+}
+- (IBAction)segmentChosen:(UISegmentedControl*)sender {
+//    self.choiceOfSegment = sender.selectedSegmentIndex;
+//    [self.photoCollectionView reloadData];
+    [self setSegmentChoice:sender];
 }
 
 -(void)createImageArray{
@@ -45,28 +81,80 @@
     Photo *p9 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Purple"] andSubject:@"City" andLocation:@"USA"];
     Photo *p10 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Yellow"] andSubject:@"City" andLocation:@"Italy"];
     
-    self.subjectD = @{@"City":@[p1.image, p4.image, p9.image, p10.image],
-                      @"Landscape":@[p2.image, p6.image, p7.image],
-                      @"Nature":@[p3.image, p5.image, p8.image],
+    NSDictionary *d1 = @{@"All":@[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]};
+    
+    NSDictionary *d2 = @{@"City":@[p1, p4, p9, p10], //sets content of first segment (subject)
+                      @"Landscape":@[p2, p6, p7],
+                      @"Nature":@[p3, p5, p8],
                       };
     
-    self.subjectKeys = [self.subjectD allKeys];
     
-    self.locationD = @{ @"UK":@[p1.image, p4.image],
-                        @"USA":@[p2.image, p8.image, p9.image],
-                        @"Canada":@[p3.image, p5.image],
-                        @"France":@[p6.image],
-                        @"Ireland":@[p7.image],
-                        @"Italy":@[p10.image]
+    
+    NSDictionary *d3 = @{ @"UK":@[p1, p4],   //second segment (location)
+                        @"USA":@[p2, p8, p9],
+                        @"Canada":@[p3, p5],
+                        @"France":@[p6],
+                        @"Ireland":@[p7],
+                        @"Italy":@[p10]
                         };
-    self.locationKeys = [self.locationD allKeys];
+    
+    self.dataDictionary = @[d1, d2, d3];
+    self.keysArray = @[d1.allKeys, d2.allKeys, d3.allKeys];
+//    
+//    self.subjectKeys = ;
+//    
+//    self.locationKeys = ;
     
 //    self.arrayOfImages = [@[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]mutableCopy];
-    
 //    return self.arrayOfImages;
 }
 
-// implement the required datasource methods
+#pragma mark #NUMBEROFSECTIONS
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    
+//    if (self.segmentChoice == 0) {
+//        
+//    } else {
+//        
+//    }
+////    NSInteger numberOfSections;
+////    if(self.choiceOfSegment == 0){
+////        numberOfSections = self.subjectKeys.count;
+////    }else if(self.choiceOfSegment == 1){
+////        numberOfSections = self.locationKeys.count;
+////    }
+//    return numberOfSections;
+    return self.currentKeys.count;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+//    NSInteger numberOfItemsInSection;
+//    if(self.choiceOfSegment == 0){
+//        NSArray *subjectValues = self.subjectD.allValues;
+//        numberOfItemsInSection = [[subjectValues objectAtIndex:section]count];
+//    }else{
+//        NSArray *locationValues = self.locationD.allValues;
+//        numberOfItemsInSection = [[locationValues objectAtIndex:section]count];
+//    }
+//    return numberOfItemsInSection;
+    NSString *key = self.currentDataDictionary.allKeys[section];
+    return self.currentDataDictionary[key].count;
+}
+
+- (PhotoCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    PhotoCollectionViewCell *cell = [self.photoCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+
+    NSString *key = self.currentKeys[indexPath.section];
+    NSArray *photos = self.currentDataDictionary[key];
+    Photo *photo = photos[indexPath.row];
+    cell.myImage.image = photo.image;
+    
+    
+    return cell;
+}
+
+
 
 
 @end
