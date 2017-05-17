@@ -14,24 +14,24 @@
     self = [super init];
     if(self) {
         
+        _image = image;
         _subject = subject;
         _location = location;
-        _image = image;
     }
     return self;
 }
 
 -(NSMutableArray *)getArrayOfImages{
-    Photo *p1 = [[Photo alloc] initWithImage:@"Bridge" andSubject:@"City" andLocation:@"UK"];
-    Photo *p2 = [[Photo alloc] initWithImage:@"Canyon" andSubject:@"Landscape" andLocation:@"USA"];
-    Photo *p3 = [[Photo alloc] initWithImage:@"Green" andSubject:@"Nature" andLocation:@"Canada"];
-    Photo *p4 = [[Photo alloc] initWithImage:@"Lights" andSubject:@"City" andLocation:@"UK"];
-    Photo *p5 = [[Photo alloc] initWithImage:@"Milkway" andSubject:@"Nature" andLocation:@"Canada"];
-    Photo *p6 = [[Photo alloc] initWithImage:@"Mountain" andSubject:@"Landscape" andLocation:@"France"];
-    Photo *p7 = [[Photo alloc] initWithImage:@"Night" andSubject:@"Landscape" andLocation:@"Ireland"];
-    Photo *p8 = [[Photo alloc] initWithImage:@"Ocean" andSubject:@"Nature" andLocation:@"USA"];
-    Photo *p9 = [[Photo alloc] initWithImage:@"Purple" andSubject:@"City" andLocation:@"USA"];
-    Photo *p10 = [[Photo alloc] initWithImage:@"Yellow" andSubject:@"City" andLocation:@"Italy"];
+    Photo *p1 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Bridge"] andSubject:@"City" andLocation:@"UK"];
+    Photo *p2 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Canyon"] andSubject:@"Landscape" andLocation:@"USA"];
+    Photo *p3 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Green"] andSubject:@"Nature" andLocation:@"Canada"];
+    Photo *p4 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Lights"] andSubject:@"City" andLocation:@"UK"];
+    Photo *p5 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Milkway"] andSubject:@"Nature" andLocation:@"Canada"];
+    Photo *p6 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Mountain"] andSubject:@"Landscape" andLocation:@"France"];
+    Photo *p7 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Night"] andSubject:@"Landscape" andLocation:@"Ireland"];
+    Photo *p8 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Ocean"] andSubject:@"Nature" andLocation:@"USA"];
+    Photo *p9 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Purple"] andSubject:@"City" andLocation:@"USA"];
+    Photo *p10 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Yellow"] andSubject:@"City" andLocation:@"Italy"];
     
     self.subjectD = [@{   @"City":@[p1.image, p4.image, p9.image, p10.image],
                           @"Landscape":@[p2.image, p6.image, p7.image],

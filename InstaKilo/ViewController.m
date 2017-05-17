@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "PhotoCollectionViewCell.h"
+#import "Photo.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic,weak) IBOutlet UICollectionView *photoCollectionView;
+@property (nonatomic) Photo *myImages;
 
 @end
 
@@ -16,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.myImages = [Photo new];
+    [self.myImages getArrayOfImages];
+    
 }
 
 
