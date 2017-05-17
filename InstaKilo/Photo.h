@@ -22,6 +22,6 @@
 
 -(NSMutableArray *)getArrayOfImages;
 
-//-(instancetype)initWithImage:(UIImage *)image andSubject:(NSString *)subject andLocation:(NSString *)location;
+-(instancetype)initWithImage:(UIImage *)image andSubject:(NSString *)subject andLocation:(NSString *)location;
 
 @end
