@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		310DD8371ECCBFD900E27FCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8361ECCBFD900E27FCD /* main.m */; };
+		310DD83A1ECCBFD900E27FCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8391ECCBFD900E27FCD /* AppDelegate.m */; };
+		310DD83D1ECCBFD900E27FCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD83C1ECCBFD900E27FCD /* ViewController.m */; };
+		310DD8401ECCBFD900E27FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310DD83E1ECCBFD900E27FCD /* Main.storyboard */; };
+		310DD8421ECCBFD900E27FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310DD8411ECCBFD900E27FCD /* Assets.xcassets */; };
+		310DD8451ECCBFD900E27FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310DD8431ECCBFD900E27FCD /* LaunchScreen.storyboard */; };
+		310DD8541ECCC37D00E27FCD /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */; };
+		310DD8571ECCC39700E27FCD /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 310DD8561ECCC39700E27FCD /* Photo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		310DD8321ECCBFD900E27FCD /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		310DD8361ECCBFD900E27FCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		310DD8381ECCBFD900E27FCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		310DD8391ECCBFD900E27FCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		310DD83B1ECCBFD900E27FCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		310DD83C1ECCBFD900E27FCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		310DD83F1ECCBFD900E27FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		310DD8411ECCBFD900E27FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		310DD8441ECCBFD900E27FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		310DD8461ECCBFD900E27FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		310DD8521ECCC37D00E27FCD /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		310DD8551ECCC39700E27FCD /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		310DD8561ECCC39700E27FCD /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		310DD82F1ECCBFD900E27FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		310DD8291ECCBFD900E27FCD = {
+			isa = PBXGroup;
+			children = (
+				310DD8341ECCBFD900E27FCD /* InstaKilo */,
+				310DD8331ECCBFD900E27FCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		310DD8331ECCBFD900E27FCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				310DD8321ECCBFD900E27FCD /* InstaKilo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		310DD8341ECCBFD900E27FCD /* InstaKilo */ = {
+			isa = PBXGroup;
+			children = (
+				310DD8381ECCBFD900E27FCD /* AppDelegate.h */,
+				310DD8391ECCBFD900E27FCD /* AppDelegate.m */,
+				310DD83B1ECCBFD900E27FCD /* ViewController.h */,
+				310DD83C1ECCBFD900E27FCD /* ViewController.m */,
+				310DD8521ECCC37D00E27FCD /* PhotoCollectionViewCell.h */,
+				310DD8531ECCC37D00E27FCD /* PhotoCollectionViewCell.m */,
+				310DD8551ECCC39700E27FCD /* Photo.h */,
+				310DD8561ECCC39700E27FCD /* Photo.m */,
+				310DD83E1ECCBFD900E27FCD /* Main.storyboard */,
+				310DD8411ECCBFD900E27FCD /* Assets.xcassets */,
+				310DD8431ECCBFD900E27FCD /* LaunchScreen.storyboard */,
+				310DD8461ECCBFD900E27FCD /* Info.plist */,
+				310DD8351ECCBFD900E27FCD /* Supporting Files */,
+			);
+			path = InstaKilo;
+			sourceTree = "<group>";
+		};
+		310DD8351ECCBFD900E27FCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				310DD8361ECCBFD900E27FCD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		310DD8311ECCBFD900E27FCD /* InstaKilo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 310DD8491ECCBFD900E27FCD /* Build configuration list for PBXNativeTarget "InstaKilo" */;
+			buildPhases = (
+				310DD82E1ECCBFD900E27FCD /* Sources */,
+				310DD82F1ECCBFD900E27FCD /* Frameworks */,
+				310DD8301ECCBFD900E27FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaKilo;
+			productName = InstaKilo;
+			productReference = 310DD8321ECCBFD900E27FCD /* InstaKilo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		310DD82A1ECCBFD900E27FCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = RushanBenazir;
+				TargetAttributes = {
+					310DD8311ECCBFD900E27FCD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 310DD82D1ECCBFD900E27FCD /* Build configuration list for PBXProject "InstaKilo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 310DD8291ECCBFD900E27FCD;
+			productRefGroup = 310DD8331ECCBFD900E27FCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				310DD8311ECCBFD900E27FCD /* InstaKilo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		310DD8301ECCBFD900E27FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310DD8451ECCBFD900E27FCD /* LaunchScreen.storyboard in Resources */,
+				310DD8421ECCBFD900E27FCD /* Assets.xcassets in Resources */,
+				310DD8401ECCBFD900E27FCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		310DD82E1ECCBFD900E27FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310DD83D1ECCBFD900E27FCD /* ViewController.m in Sources */,
+				310DD8541ECCC37D00E27FCD /* PhotoCollectionViewCell.m in Sources */,
+				310DD83A1ECCBFD900E27FCD /* AppDelegate.m in Sources */,
+				310DD8571ECCC39700E27FCD /* Photo.m in Sources */,
+				310DD8371ECCBFD900E27FCD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		310DD83E1ECCBFD900E27FCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				310DD83F1ECCBFD900E27FCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		310DD8431ECCBFD900E27FCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				310DD8441ECCBFD900E27FCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		310DD8471ECCBFD900E27FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		310DD8481ECCBFD900E27FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		310DD84A1ECCBFD900E27FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaKilo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RB.InstaKilo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		310DD84B1ECCBFD900E27FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaKilo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RB.InstaKilo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		310DD82D1ECCBFD900E27FCD /* Build configuration list for PBXProject "InstaKilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310DD8471ECCBFD900E27FCD /* Debug */,
+				310DD8481ECCBFD900E27FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		310DD8491ECCBFD900E27FCD /* Build configuration list for PBXNativeTarget "InstaKilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310DD84A1ECCBFD900E27FCD /* Debug */,
+				310DD84B1ECCBFD900E27FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 310DD82A1ECCBFD900E27FCD /* Project object */;
+}
