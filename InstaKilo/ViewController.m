@@ -17,6 +17,8 @@ typedef NS_ENUM(NSUInteger, Section) {
     SubjectSection,
 };
 
+#pragma mark PROPERTIES
+
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic,weak) IBOutlet UICollectionView *photoCollectionView;
@@ -41,6 +43,9 @@ typedef NS_ENUM(NSUInteger, Section) {
 
 
 @end
+
+
+#pragma mark PRINTCONTROLLER
 
 @implementation ViewController
 
@@ -70,6 +75,8 @@ typedef NS_ENUM(NSUInteger, Section) {
     [self setSegmentChoice:sender];
 }
 
+#pragma mark PHOTOARRAYS + DICTIONARIES
+
 -(void)createImageArray{
     Photo *p1 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Bridge"] andSubject:@"City" andLocation:@"UK"];
     Photo *p2 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Canyon"] andSubject:@"Landscape" andLocation:@"USA"];
@@ -82,16 +89,16 @@ typedef NS_ENUM(NSUInteger, Section) {
     Photo *p9 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Purple"] andSubject:@"City" andLocation:@"USA"];
     Photo *p10 = [[Photo alloc] initWithImage:[UIImage imageNamed:@"Yellow"] andSubject:@"City" andLocation:@"Italy"];
     
-    NSDictionary *d1 = @{@"All":@[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]};
+    NSDictionary *d1 = @{@"All":@[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]}; //sets content of first segment (ALL)
     
-    NSDictionary *d2 = @{@"City":@[p1, p4, p9, p10], //sets content of first segment (subject)
+    NSDictionary *d2 = @{@"City":@[p1, p4, p9, p10], //Subject
                       @"Landscape":@[p2, p6, p7],
                       @"Nature":@[p3, p5, p8],
                       };
     
     
     
-    NSDictionary *d3 = @{ @"UK":@[p1, p4],   //second segment (location)
+    NSDictionary *d3 = @{ @"UK":@[p1, p4],   //Locations
                         @"USA":@[p2, p8, p9],
                         @"Canada":@[p3, p5],
                         @"France":@[p6],
@@ -99,10 +106,10 @@ typedef NS_ENUM(NSUInteger, Section) {
                         @"Italy":@[p10]
                         };
     
-    N
+
     
     self.dataDictionary = @[d1, d2, d3];
-    self.keysArray = @[d1.allKeys, d2.allKeys, d3.allKeys];
+    self.keysArray = @[d1.allKeys, d2.allKeys, d3.allKeys];  //Keys for the values
 //    
 //    self.subjectKeys = ;
 //    
@@ -112,11 +119,14 @@ typedef NS_ENUM(NSUInteger, Section) {
 //    return self.arrayOfImages;
 }
 
+
+#pragma mark COLLECTIONVIEW
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     if (kind == UICollectionElementKindSectionHeader) {
         HeaderCollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
-        [view setHeaderText:self.currentKeys[indexPath.section]];
+        [view setHeaderText:self.currentKeys[indexPath.section]];  //sets header text based on Dictionary Keys
         
         return view;
     }
@@ -124,8 +134,6 @@ typedef NS_ENUM(NSUInteger, Section) {
     return nil;
     
 }
-
-#pragma mark #NUMBEROFSECTIONS
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     
@@ -141,7 +149,7 @@ typedef NS_ENUM(NSUInteger, Section) {
 ////        numberOfSections = self.locationKeys.count;
 ////    }
 //    return numberOfSections;
-    return self.currentKeys.count;
+    return self.currentKeys.count;  //returns number of Keys
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -155,16 +163,16 @@ typedef NS_ENUM(NSUInteger, Section) {
 //    }
 //    return numberOfItemsInSection;
     NSString *key = self.currentDataDictionary.allKeys[section];
-    return self.currentDataDictionary[key].count;
+    return self.currentDataDictionary[key].count;  //returns number of current data keys
 }
 
 - (PhotoCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PhotoCollectionViewCell *cell = [self.photoCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    PhotoCollectionViewCell *cell = [self.photoCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];  //sets photos to cell
 
     NSString *key = self.currentKeys[indexPath.section];
     NSArray *photos = self.currentDataDictionary[key];
     Photo *photo = photos[indexPath.row];
-    cell.myImage.image = photo.image;
+    cell.myImage.image = photo.image;  //returns photo image
     
     
     return cell;

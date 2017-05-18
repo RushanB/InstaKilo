@@ -18,7 +18,7 @@
 
 @implementation HeaderCollectionReusableView
 
-- (void)setHeaderText:(NSString *)text {
+- (void)setHeaderText:(NSString *)text {  //sets header text
     self.headerLabel.text = text;
 }
 
